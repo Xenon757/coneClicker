@@ -61,7 +61,7 @@ body{
     left: 75%;
     top: 0px;
 }
-#coneGen{
+.building{
     opacity: .5;
     border-width: 5px;
     border-style: solid;
@@ -80,12 +80,12 @@ body{
     background-repeat: no-repeat, no-repeat;
     background-position-x: 100%;
 }
-#coneGenLabel{
+.label{
     font-size: 15px;
     font-weight: 100;
     color: white;
 }
-#coneGenNum{
+.num{
     font-size: 15px;
     font-weight: 100;
     display: inline;
@@ -103,7 +103,7 @@ body{
     font-size: 25px;
     color: white;
 }
-#coneGenCost{
+.cost{
     font-size: 15px;
     font-weight: 100;
     display: inline;
@@ -115,4 +115,8 @@ body{
 }
 .point{
     color: white;
+}
+#kitchen{
+    font-size: 25px;
+    background-image: url(https://lh3.googleusercontent.com/6CnRrgpzeFQ2jFBaRUNjr-OVZsOxq3D617B0L05z2kf526cghif3b3qvcPSEOLCFKELHseZaLbXi5uFc7A1DFw2x9mvORjUnbUlpgtgX3kJENDX5lin_dAuzAgf_bb0Uun3qdBUC2Q=w2400), url(https://lh3.googleusercontent.com/HEhY9nxd8Wc-vQAqF0I2fNVwHEgQllpj1bPU8rZN8J1raM_9yavOAAgdKz1E_BQ4Bk0g6UovP6sKocBjhLvbGUaL71PXLyzRIKPcc45DZ451UGxg_mqqbslxqwH6HfsqNYWRxxH0iQ=w2400);
 }

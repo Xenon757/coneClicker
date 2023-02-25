@@ -46,6 +46,10 @@ function coneClicked(){
 //store variables:
 let coneGenCount = 0;
 let coneGenCost = 15;
+let kitchenCost = 100;
+let kitchenCount = 0;
+let classCost = 1000;
+let classCount = 0;
 function update(){
     const cone = document.getElementById("cone");
     //store functions:
@@ -56,6 +60,22 @@ function update(){
         document.getElementById("coneGenNum").innerHTML = coneGenCount;
         document.getElementById("coneGenCost").innerHTML = coneGenCost;
         rate += .1;
+    }
+    function kitchenGen(){
+        score -= kitchenCost;
+        kitchenCost = Math.floor(kitchenCost * 1.15);
+        kitchenCount++;
+        document.getElementById("kitchenNum").innerHTML = kitchenCount;
+        document.getElementById("kitchenCost").innerHTML = kitchenCost;
+        rate += 1;
+    }
+    function classGen(){
+        score -= classCost;
+        classCost = Math.floor(classCost * 1.15);
+        classCount++;
+        document.getElementById("classNum").innerHTML = classCount;
+        document.getElementById("classCost").innerHTML = classCost;
+        rate += 8;
     }
     setInterval(changeScore, 5);
     setInterval(coneUpgrade, 5);
@@ -157,22 +177,31 @@ function update(){
         }
     }
     const coneGen = document.getElementById("coneGen");
+    const kitchen = document.getElementById("kitchen");
+    const belwalClass = document.getElementById("class");
     let coneGencheck = false;
     function check(){
-        if(score >= coneGenCost){
-            if(!coneGencheck){
-                coneGen.style.opacity = .9;
-                coneGencheck = true;
-            }
-            coneGen.addEventListener("click", coneGenerator)
-        }
-        else{
-            coneGen.removeEventListener("click", coneGenerator);
-            coneGencheck = false;
-            coneGen.style.opacity = .5;
-        }
+        shops(coneGen, coneGenCost, coneGenerator);
+        shops(kitchen, kitchenCost, kitchenGen);
+        shops(belwalClass, classCost, classGen);
     }
 }
+function shops(element, cost, funct){
+    let buildingCheck = false;
+    if(score >= cost){
+        if(!buildingCheck){
+            element.style.opacity = .9;
+            buildingCheck = true;
+        }
+        element.addEventListener("click", funct);
+    }
+    else{
+        element.removeEventListener("click", funct);
+        buildingCheck = false;
+        element.style.opacity = .5;
+    }
+}
+
 function setScore(num){
     score = num;
 }

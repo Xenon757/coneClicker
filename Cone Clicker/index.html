@@ -16,9 +16,17 @@
     <div id="border"></div>
     <div id="yoonseo"></div>
     <div id="store">
-        <div id="coneGen" onmouseenter="hover(this)" onmouseleave="dim(this)">
+        <div id="coneGen" class="building" onmouseenter="hover(this)" onmouseleave="dim(this)">
             Cone Generator
-            <div id="coneGenLabel"><div id="coneGenCost">15</div><div style="display: inline;"> cookies ---- Amount: </div> <div id="coneGenNum">0</div></div>
+            <div id="coneGenLabel" class="label"><div id="coneGenCost" class="cost">15</div><div style="display: inline;"> cookies ---- Amount: </div> <div id="coneGenNum" class="num">0</div></div>
+        </div>
+        <div id="kitchen" class="building" onmouseenter="hover(this)" onmouseleave="dim(this)">
+            Kaichang's Cone Kitchen
+            <div id="kitchenLabel" class="label"><div id="kitchenCost" class="cost">100</div><div style="display: inline;"> cookies ---- Amount: </div> <div id="kitchenNum" class="num">0</div></div>
+        </div>
+        <div id="class" class="building" onmouseenter="hover(this)" onmouseleave="dim(this)">
+            Maestro Belwal's Class
+            <div id="classLabel" class="label"><div id="classCost" class="cost">1000</div><div style="display: inline;"> cookies ---- Amount: </div> <div id="classNum" class="num">0</div></div>
         </div>
     </div>
     <h1 id="cheatCode" onclick="addCones(100)">Free 100 cones!</h1>
